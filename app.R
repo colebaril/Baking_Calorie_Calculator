@@ -1,6 +1,5 @@
 library(shiny)
 library(tidyverse)
-library(plotly)
 
 unit_choices <- c("Cups", "Metric")
 
@@ -113,23 +112,23 @@ server <- function(input, output, session) {
     
     # PROTEIN --
     
-    butter_protein <- input$butter * 227 * 0
-    sugar_protein <- input$sugar * 200 * 4
-    brown_sugar_protein <- input$brown_sugar * 220 * 3.81
+    butter_protein <- input$butter  * 0
+    sugar_protein <- input$sugar  * 0
+    brown_sugar_protein <- input$brown_sugar  * 0
     eggs_protein <- input$eggs * 6
-    flour_protein <- input$flour * 125 * 0.1
-    icing_sugar_protein <- input$icing_sugar * 120 * 4
-    milk_protein <- input$milk * 250 * 0.5
-    vegetable_oil_protein <- input$vegetable_oil * 250 * 9
-    cocoa_powder_protein <- input$cocoa_powder * 85 * 2
-    cream_cheese_protein <- input$cream_cheese * 225 * 3
+    flour_protein <- input$flour *  0.1
+    icing_sugar_protein <- input$icing_sugar  * 0
+    milk_protein <- input$milk  * 0.5
+    vegetable_oil_protein <- input$vegetable_oil  * 0
+    cocoa_powder_protein <- input$cocoa_powder  * 0.19
+    cream_cheese_protein <- input$cream_cheese  * 0.08
     banana_protein <- input$bananas * 1.3
-    chocolate_chips_protein <- input$chocolate_chips * 170 * 4.79
-    flax_protein <- input$flax * 120
-    whole_wheat_flour_protein <- input$whole_wheat_flour * 120 * 3
-    bran_protein <- input$bran * 47 * 2
-    wheat_germ_protein <- input$wheat_germ * 105 * 4
-    oats_protein <- input$oats * 80 * 4
+    chocolate_chips_protein <- input$chocolate_chips  * 0.04
+    flax_protein <- input$flax  * 0.26
+    whole_wheat_flour_protein <- input$whole_wheat_flour  * 3
+    bran_protein <- input$bran  * 2
+    wheat_germ_protein <- input$wheat_germ  * 0.27
+    oats_protein <- input$oats  * 0.13
     
     total_protein <- butter_protein + sugar_protein + brown_sugar_protein + 
       eggs_protein + flour_protein + icing_sugar_protein + milk_protein + 
@@ -144,23 +143,23 @@ server <- function(input, output, session) {
     
     # CARBS --
     
-    butter_carbs <- input$butter * 227 * 0
-    sugar_carbs <- input$sugar * 200 * 4
-    brown_sugar_carbs <- input$brown_sugar * 220 * 3.81
+    butter_carbs <- input$butter  * 0
+    sugar_carbs <- input$sugar  * 1
+    brown_sugar_carbs <- input$brown_sugar  * 0.97
     eggs_carbs <- input$eggs * 0.6
-    flour_carbs <- input$flour * 125 * 0.76
-    icing_sugar_carbs <- input$icing_sugar * 120 * 4
-    milk_carbs <- input$milk * 250 * 0.5
-    vegetable_oil_carbs <- input$vegetable_oil * 250 * 9
-    cocoa_powder_carbs <- input$cocoa_powder * 85 * 2
-    cream_cheese_carbs <- input$cream_cheese * 225 * 3
+    flour_carbs <- input$flour  * 0.76
+    icing_sugar_carbs <- input$icing_sugar  * 0.99
+    milk_carbs <- input$milk  * 0.5
+    vegetable_oil_carbs <- input$vegetable_oil  * 0
+    cocoa_powder_carbs <- input$cocoa_powder  * 0.11
+    cream_cheese_carbs <- input$cream_cheese  * 0.03
     banana_carbs <- input$bananas * 27
-    chocolate_chips_carbs <- input$chocolate_chips * 170 * 4.79
-    flax_carbs <- input$flax * 120
-    whole_wheat_flour_carbs <- input$whole_wheat_flour * 120 * 0.72
-    bran_carbs <- input$bran * 47 * 2
-    wheat_germ_carbs <- input$wheat_germ * 105 * 4
-    oats_carbs <- input$oats * 80 * 4
+    chocolate_chips_carbs <- input$chocolate_chips  * 0.5
+    flax_carbs <- input$flax  * 0.09
+    whole_wheat_flour_carbs <- input$whole_wheat_flour  * 0.72
+    bran_carbs <- input$bran  * 2
+    wheat_germ_carbs <- input$wheat_germ  * 0.13
+    oats_carbs <- input$oats  * 0.66
     
     total_carbs <- butter_carbs + sugar_carbs + brown_sugar_carbs + 
       eggs_carbs + flour_carbs + icing_sugar_carbs + milk_carbs + 
@@ -175,23 +174,23 @@ server <- function(input, output, session) {
     
     # FATS --
     
-    butter_fats <- input$butter * 227 * 0.81
-    sugar_fats <- input$sugar * 200 * 4
-    brown_sugar_fats <- input$brown_sugar * 220 * 3.81
+    butter_fats <- input$butter  * 0.81
+    sugar_fats <- input$sugar  * 0
+    brown_sugar_fats <- input$brown_sugar  * 0
     eggs_fats <- input$eggs * 5
-    flour_fats <- input$flour * 125 * 0.01
-    icing_sugar_fats <- input$icing_sugar * 120 * 4
-    milk_fats <- input$milk * 250 * 0.5
-    vegetable_oil_fats <- input$vegetable_oil * 250 * 9
-    cocoa_powder_fats <- input$cocoa_powder * 85 * 2
-    cream_cheese_fats <- input$cream_cheese * 225 * 3
+    flour_fats <- input$flour  * 0.01
+    icing_sugar_fats <- input$icing_sugar  * 0
+    milk_fats <- input$milk  * 0.5
+    vegetable_oil_fats <- input$vegetable_oil  * 1
+    cocoa_powder_fats <- input$cocoa_powder  * 0.12
+    cream_cheese_fats <- input$cream_cheese  * 0.35
     banana_fats <- input$bananas * 0.4
-    chocolate_chips_fats <- input$chocolate_chips * 170 * 4.79
-    flax_fats <- input$flax * 120
-    whole_wheat_flour_fats <- input$whole_wheat_flour * 120 * 0.01
-    bran_fats <- input$bran * 47 * 2
-    wheat_germ_fats <- input$wheat_germ * 105 * 4
-    oats_fats <- input$oats * 80 * 4
+    chocolate_chips_fats <- input$chocolate_chips  * 0.28
+    flax_fats <- input$flax  * 0.42
+    whole_wheat_flour_fats <- input$whole_wheat_flour  * 0.01
+    bran_fats <- input$bran  * 2
+    wheat_germ_fats <- input$wheat_germ  * 0.09
+    oats_fats <- input$oats  * 0.1
     
     total_fats <- butter_fats + sugar_fats + brown_sugar_fats + 
       eggs_fats + flour_fats + icing_sugar_fats + milk_fats + 
@@ -262,22 +261,22 @@ server <- function(input, output, session) {
       # PROTEIN --
       
       butter_protein <- input$butter * 227 * 0
-      sugar_protein <- input$sugar * 200 * 4
-      brown_sugar_protein <- input$brown_sugar * 220 * 3.81
+      sugar_protein <- input$sugar * 200 * 0
+      brown_sugar_protein <- input$brown_sugar * 220 * 0
       eggs_protein <- input$eggs * 6
       flour_protein <- input$flour * 125 * 0.1
-      icing_sugar_protein <- input$icing_sugar * 120 * 4
+      icing_sugar_protein <- input$icing_sugar * 120 * 0
       milk_protein <- input$milk * 250 * 0.5
-      vegetable_oil_protein <- input$vegetable_oil * 250 * 9
-      cocoa_powder_protein <- input$cocoa_powder * 85 * 2
-      cream_cheese_protein <- input$cream_cheese * 225 * 3
+      vegetable_oil_protein <- input$vegetable_oil * 250 * 0
+      cocoa_powder_protein <- input$cocoa_powder * 85 * 0.19
+      cream_cheese_protein <- input$cream_cheese * 225 * 0.08
       banana_protein <- input$bananas * 1.3
-      chocolate_chips_protein <- input$chocolate_chips * 170 * 4.79
-      flax_protein <- input$flax * 120
+      chocolate_chips_protein <- input$chocolate_chips * 170 * 0.04
+      flax_protein <- input$flax * 120 * 0.26
       whole_wheat_flour_protein <- input$whole_wheat_flour * 120 * 3
       bran_protein <- input$bran * 47 * 2
-      wheat_germ_protein <- input$wheat_germ * 105 * 4
-      oats_protein <- input$oats * 80 * 4
+      wheat_germ_protein <- input$wheat_germ * 105 * 0.27
+      oats_protein <- input$oats * 80 * 0.13
       
       total_protein <- butter_protein + sugar_protein + brown_sugar_protein + 
         eggs_protein + flour_protein + icing_sugar_protein + milk_protein + 
@@ -293,22 +292,22 @@ server <- function(input, output, session) {
       # CARBS --
       
       butter_carbs <- input$butter * 227 * 0
-      sugar_carbs <- input$sugar * 200 * 4
-      brown_sugar_carbs <- input$brown_sugar * 220 * 3.81
+      sugar_carbs <- input$sugar * 200 * 1
+      brown_sugar_carbs <- input$brown_sugar * 220 * 0.97
       eggs_carbs <- input$eggs * 0.6
       flour_carbs <- input$flour * 125 * 0.76
-      icing_sugar_carbs <- input$icing_sugar * 120 * 4
+      icing_sugar_carbs <- input$icing_sugar * 120 * 0.99
       milk_carbs <- input$milk * 250 * 0.5
-      vegetable_oil_carbs <- input$vegetable_oil * 250 * 9
-      cocoa_powder_carbs <- input$cocoa_powder * 85 * 2
-      cream_cheese_carbs <- input$cream_cheese * 225 * 3
+      vegetable_oil_carbs <- input$vegetable_oil * 250 * 0
+      cocoa_powder_carbs <- input$cocoa_powder * 85 * 0.11
+      cream_cheese_carbs <- input$cream_cheese * 225 * 0.03
       banana_carbs <- input$bananas * 27
-      chocolate_chips_carbs <- input$chocolate_chips * 170 * 4.79
-      flax_carbs <- input$flax * 120
+      chocolate_chips_carbs <- input$chocolate_chips * 170 * 0.5
+      flax_carbs <- input$flax * 120 * 0.09
       whole_wheat_flour_carbs <- input$whole_wheat_flour * 120 * 0.72
       bran_carbs <- input$bran * 47 * 2
-      wheat_germ_carbs <- input$wheat_germ * 105 * 4
-      oats_carbs <- input$oats * 80 * 4
+      wheat_germ_carbs <- input$wheat_germ * 105 * 0.13
+      oats_carbs <- input$oats * 80 * 0.66
       
       total_carbs <- butter_carbs + sugar_carbs + brown_sugar_carbs + 
         eggs_carbs + flour_carbs + icing_sugar_carbs + milk_carbs + 
@@ -324,22 +323,22 @@ server <- function(input, output, session) {
       # FATS --
       
       butter_fats <- input$butter * 227 * 0.81
-      sugar_fats <- input$sugar * 200 * 4
-      brown_sugar_fats <- input$brown_sugar * 220 * 3.81
+      sugar_fats <- input$sugar * 200 * 0
+      brown_sugar_fats <- input$brown_sugar * 220 * 0
       eggs_fats <- input$eggs * 5
       flour_fats <- input$flour * 125 * 0.01
-      icing_sugar_fats <- input$icing_sugar * 120 * 4
+      icing_sugar_fats <- input$icing_sugar * 120 * 0
       milk_fats <- input$milk * 250 * 0.5
-      vegetable_oil_fats <- input$vegetable_oil * 250 * 9
-      cocoa_powder_fats <- input$cocoa_powder * 85 * 2
-      cream_cheese_fats <- input$cream_cheese * 225 * 3
+      vegetable_oil_fats <- input$vegetable_oil * 250 * 1
+      cocoa_powder_fats <- input$cocoa_powder * 85 * 0.12
+      cream_cheese_fats <- input$cream_cheese * 225 * 0.35
       banana_fats <- input$bananas * 0.4
-      chocolate_chips_fats <- input$chocolate_chips * 170 * 4.79
-      flax_fats <- input$flax * 120
+      chocolate_chips_fats <- input$chocolate_chips * 170 * 0.28
+      flax_fats <- input$flax * 120 * 0.42
       whole_wheat_flour_fats <- input$whole_wheat_flour * 120 * 0.01
       bran_fats <- input$bran * 47 * 2
-      wheat_germ_fats <- input$wheat_germ * 105 * 4
-      oats_fats <- input$oats * 80 * 4
+      wheat_germ_fats <- input$wheat_germ * 105 * 0.09
+      oats_fats <- input$oats * 80 * 0.1
       
       total_fats <- butter_fats + sugar_fats + brown_sugar_fats + 
         eggs_fats + flour_fats + icing_sugar_fats + milk_fats + 
@@ -369,6 +368,7 @@ server <- function(input, output, session) {
           ggplot(data = df, aes(x = macro, y = g, fill = macro)) +
             geom_col() +
             theme_bw() +
+          scale_fill_viridis_d() +
             labs(title = "Macronutrient Breakdown",
                  x = "Macronutrient",
                  y = "Quantity (g)") +
